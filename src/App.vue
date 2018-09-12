@@ -63,11 +63,9 @@ export default {
       this.$copyText(":" + emoji.name + ":").then(
         e => {
           alert("Copied");
-          console.log(e);
         },
         e => {
           alert("Can not copy");
-          console.log(e);
         }
       );
     }
