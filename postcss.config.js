@@ -1,17 +1,12 @@
-// module.exports = {
-//   plugins: {
-//     tailwindcss: {},
-//     autoprefixer: {}
-//   }
-// };
-
-let tailwindcss = require("tailwindcss");
+const tailwindcss = require("tailwindcss");
+const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
   plugins: [
-    // ...
     tailwindcss("./tailwind.js"),
-    require("autoprefixer")
-    // ...
+    require("autoprefixer"),
+    purgecss({
+      content: ["./src/**/*.html", "./src/**/*.vue"]
+    })
   ]
 };

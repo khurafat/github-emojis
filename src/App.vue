@@ -60,14 +60,17 @@ export default {
   },
   methods: {
     doCopy: function(emoji) {
-      this.$copyText(":" + emoji.name + ":").then(
-        e => {
-          alert("Copied");
-        },
-        e => {
-          alert("Can not copy");
-        }
-      );
+      this.$copyText(":" + emoji.name + ":");
+      // .then(
+      //   e => {
+      //     alert("Copied");
+      //     console.log(e);
+      //   },
+      //   e => {
+      //     alert("Can not copy");
+      //     console.log(e);
+      //   }
+      // );
     }
   }
 };
