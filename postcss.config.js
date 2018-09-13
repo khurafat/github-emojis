@@ -7,7 +7,7 @@ module.exports = {
     require("autoprefixer"),
     purgecss({
       content: ["./src/**/*.html", "./src/**/*.vue"],
-      whitelist: ["w-1/3"]
+      whitelist: ["w-1/3", "w-1/2"]
     })
   ]
 };
