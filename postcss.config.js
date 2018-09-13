@@ -6,7 +6,8 @@ module.exports = {
     tailwindcss("./tailwind.js"),
     require("autoprefixer"),
     purgecss({
-      content: ["./src/**/*.html", "./src/**/*.vue"]
+      content: ["./src/**/*.html", "./src/**/*.vue"],
+      whitelist: ["w-1/2"]
     })
   ]
 };

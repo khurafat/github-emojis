@@ -13,9 +13,11 @@
     <!-- Two columns -->
     <section class="flex mb-4 bg-grey-lighter rounded-lg p-4">
       <div class="text-center flex flex-wrap">
-          <div v-for="emoji in filteredList" v-bind:key="emoji.name" class="p-4 w-1/2 flex items-center cursor-pointer" @click="doCopy(emoji)">
-            <img :src="emoji.img" :alt="emoji.name" class="w-12 h-12 ml-24 mr-12">
-            <div class="text-center bg-grey-light py-1 px-3 rounded-sm text-grey-dark"><pre class="">{{ ':' + emoji.name + ':'}}</pre></div>
+          <div v-for="emoji in filteredList" v-bind:key="emoji.name" class="w-1/2 cursor-pointer" @click="doCopy(emoji)">
+            <div class="p-4 flex items-center ">
+              <img :src="emoji.img" :alt="emoji.name" class="w-12 h-12 ml-24 mr-12">
+              <div class="text-center bg-grey-light py-1 px-3 rounded-sm text-grey-dark"><pre class="">{{ ':' + emoji.name + ':'}}</pre></div>
+            </div>
           </div>
       </div>
     </section>
@@ -29,14 +31,10 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import axios from "axios";
 
 export default {
   name: "app",
-  components: {
-    HelloWorld
-  },
   data() {
     return {
       emojis: [],
@@ -77,12 +75,6 @@ export default {
 </script>
 
 <style>
-/* body {
-  background-color: #fff;
-  background-image: url("./assets/khurafat.png");
-  background-position: right bottom;
-  background-repeat: no-repeat;
-} */
 .watermark {
   right: -2rem;
   bottom: -0.75rem;
