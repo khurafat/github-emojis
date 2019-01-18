@@ -1,40 +1,61 @@
 <template>
-  <div id="app" class="text-center container mx-auto">
-    <div class="my-12">
+  <div id="app" class="font-sans text-semi-black">
+    <section class="pt-6 pl-10">
       <img alt="Github Emojis" src="./assets/logo.png">
-      <h1 class="mb-2">Github Emojis</h1>
-      <p>A list of all the emojis that can be used in Github flavourd Markdown.</p>
-    </div>
+    </section>
+    <div class="text-center container mx-auto">
+      <header class="my-12">
+        <h1 class="mb-2 text-6xl">Find your Emojis Here</h1>
+        <p
+          class="font-light text-sm mt-10"
+        >A list of all the emojis that can be used in Github flavourd Markdown.</p>
+      </header>
 
-    <div class="container mx-auto mb-12 flex flex-col items-center">
-      <input type="search" placeholder="Search an emoji..." class="shadow appearance-none border rounded w-1/2 pt-3 pb-2 px-3 text-grey-darker" v-model="search">
-    </div>
+      <div class="container mx-auto mb-12 flex flex-col items-center">
+        <input
+          type="search"
+          placeholder="Search an emoji..."
+          class="shadow appearance-none border rounded w-1/2 pt-3 pb-2 px-3 text-grey-darker"
+          v-model="search"
+        >
+      </div>
 
-    <!-- Two columns -->
-    <section class="flex mb-4 bg-grey-lighter rounded-lg">
-      <div class="text-center flex flex-wrap py-6">
-          <div v-for="emoji in filteredList" v-bind:key="emoji.name" class="w-1/3 cursor-pointer" @click="doCopy(emoji)">
-            <div class="py-4 flex items-center ">
+      <!-- Two columns -->
+      <section class="flex mb-4 bg-grey-lighter rounded-lg">
+        <div class="text-center flex flex-wrap py-6">
+          <div
+            v-for="emoji in filteredList"
+            v-bind:key="emoji.name"
+            class="w-1/3 cursor-pointer"
+            @click="doCopy(emoji)"
+          >
+            <div class="py-4 flex items-center">
               <img :src="emoji.img" :alt="emoji.name" class="w-12 h-12 ml-10 mr-6">
-              <div class="text-center bg-grey-light py-1 px-3 rounded-sm text-grey-dark"><pre class="">{{ ':' + emoji.name + ':'}}</pre></div>
+              <div class="text-center bg-grey-light py-1 px-3 rounded-sm text-grey-dark">
+                <pre class>{{ ':' + emoji.name + ':'}}</pre>
+              </div>
             </div>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <footer class="my-12">
-      <p>A fun product by <a href="https://www.khurafat.desi">Khurafat.desi</a></p>
-    </footer>
+      <footer class="my-12">
+        <p>
+          A fun product by
+          <a href="https://www.khurafat.desi">Khurafat.desi</a>
+        </p>
+      </footer>
 
-    <div class="copied bg-grey-light">
-      <p class="text-grey font-bold">Tag Copied!</p>
-      <div class="p-12">
-        <img :src="copied.img" :alt="copied.name" class="mr-12 pt-8">
-        <h3 class="py-4 px-8 align-top text-grey bg-grey-light">{{ ":" + copied.name + ":" }}</h3>
+      <div class="copied bg-grey-light">
+        <p class="text-grey font-bold">Tag Copied!</p>
+        <div class="p-12">
+          <img :src="copied.img" :alt="copied.name" class="mr-12 pt-8">
+          <h3 class="py-4 px-8 align-top text-grey bg-grey-light">{{ ":" + copied.name + ":" }}</h3>
+        </div>
       </div>
+
+      <img src="./assets/khurafat.png" alt="Khurafat" class="watermark fixed">
     </div>
-
-    <img src="./assets/khurafat.png" alt="Khurafat" class="watermark fixed" />
   </div>
 </template>
 

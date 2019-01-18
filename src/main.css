@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Leckerli+One|Montserrat:300,400,500,600");
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -60,3 +62,21 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+@font-face {
+  font-family: "Gadugi";
+  src: url("assets/fonts/gadugi.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "GadugiBold";
+  src: url("assets/fonts/gadugi-bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+header h1 {
+  font-family: "GadugiBold";
+}
+header p {
+  color: #484848;
+}
+/* @apply .font-handwriting; */

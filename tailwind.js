@@ -46,6 +46,7 @@ let colors = {
   transparent: "transparent",
 
   black: "#22292f",
+  "semi-black": "#484848",
   "grey-darkest": "#3d4852",
   "grey-darker": "#606f7b",
   "grey-dark": "#8795a1",
@@ -190,6 +191,7 @@ module.exports = {
 
   fonts: {
     sans: [
+      "Montserrat",
       "system-ui",
       "BlinkMacSystemFont",
       "-apple-system",
@@ -222,7 +224,8 @@ module.exports = {
       "Liberation Mono",
       "Courier New",
       "monospace"
-    ]
+    ],
+    handwriting: ["Leckerli One"]
   },
 
   /*
@@ -253,7 +256,8 @@ module.exports = {
     "2xl": "1.5rem", // 24px
     "3xl": "1.875rem", // 30px
     "4xl": "2.25rem", // 36px
-    "5xl": "3rem" // 48px
+    "5xl": "3rem", // 48px
+    "6xl": "3.25rem" // 48px
   },
 
   /*
