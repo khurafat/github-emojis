@@ -15,17 +15,21 @@
     "vue-clipboard2": "^0.2.1"
   },
   "devDependencies": {
+    "@vue/cli-service": "^3.4.0",
+    "postcss-loader": "^3.0.0",
+    "vue-loader": "^15.6.2",
+    "css-loader": "^2.1.0",
     "@fullhuman/postcss-purgecss": "^1.0.1",
     "@vue/cli-plugin-babel": "^3.0.2",
     "@vue/cli-plugin-eslint": "^3.0.2",
     "@vue/eslint-config-prettier": "^3.0.2",
     "autoprefixer": "^9.1.5",
-    "purgecss": "^1.1.0",
-    "thread-loader": "^1.2.0",
     "cache-loader": "^1.2.2",
     "file-loader": "^2.0.0",
+    "purgecss": "^1.1.0",
+    "thread-loader": "^1.2.0",
     "url-loader": "^1.1.1",
-    "vue-template-compiler": "^2.5.17",
-    "vue-style-loader": "^4.1.2"
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17"
   }
 }

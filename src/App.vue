@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="font-sans text-semi-black">
     <section class="pt-6 pl-10">
-      <img alt="Github Emojis" src="./assets/logo.png">
+      <img alt="Github Emojis" src="./assets/logo.png" width="150px">
     </section>
     <div class="text-center container mx-auto">
       <header class="my-12">
